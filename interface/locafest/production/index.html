@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>LocaFest | Calendário de Pedidos</title>
+
+        <!-- Bootstrap core CSS -->
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/animate.min.css" rel="stylesheet">
+
+        <!-- Custom styling plus plugins -->
+        <link href="css/custom.css" rel="stylesheet">
+        <link href="css/icheck/flat/green.css" rel="stylesheet">
+
+        <link href="css/calendar/fullcalendar.css" rel="stylesheet">
+        <link href="css/calendar/fullcalendar.print.css" rel="stylesheet" media="print">
+
+        <script src="js/jquery.min.js"></script>
+
+        <!--[if lt IE 9]>
+            <script src="../assets/js/ie8-responsive-file-warning.js"></script>
+            <![endif]-->
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+              <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+              <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+
+    </head>
+
+
+    <body class="nav-md">
+
+        <div class="container body">
+
+
+            <div class="main_container">
+
+                <div class="col-md-3 left_col">
+                    <div class="left_col scroll-view">
+
+                        <div class="navbar nav_title" style="border: 0;">
+                            <a href="index.html" class="site_title"><span>Izzabela Buffet</span></a>
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <br />
+
+                        <!-- sidebar menu -->
+                        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+                            <div class="menu_section">
+                                <h3>Menu Principal</h3>
+                                <ul class="nav side-menu">
+                                    <li><a><i class="fa fa-list-alt"></i> Pedidos <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu" style="display: none">
+                                            <li><a href="index.html">Cadastro</a> </li>
+                                            <li><a href="invoices.html">Relação de Pedidos</a> </li>
+                                            <li><a href="index2.html">Relatórios</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li><a><i class="fa fa-dropbox"></i> Estoque <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu" style="display: none">
+                                            <li><a href="product_form.html">Cadastro de Produtos</a> </li>
+                                            <li><a href="products.html">Relação de Produtos</a> </li>
+                                            <li><a href="form_advanced.html">Relatórios</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li><a><i class="fa fa-users"></i> Clientes <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu" style="display: none">
+                                            <li><a href="client_form.html">Cadastro</a> </li>
+                                            <li><a href="clients.html">Relação de Clientes</a> </li>
+                                            <li><a href="form_advanced.html">Relatórios</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li><a><i class="fa fa-user"></i> Funcionários <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu" style="display: none">
+                                            <li><a href="employee_form.html">Cadastro</a></li>
+                                            <li><a href="employeers.html">Relação de Funcionários</a> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!-- /sidebar menu -->
+
+                        <!-- /menu footer buttons -->
+                        <div class="sidebar-footer hidden-small">
+                            <a data-toggle="tooltip" data-placement="top" title="Configurações">
+                                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="Preencher tela">
+                                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="Ajuda">
+                                <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+                            </a>
+                            <a data-toggle="tooltip" data-placement="top" title="Sair">
+                                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                        <!-- /menu footer buttons -->
+                    </div>
+                </div>
+
+                <!-- top navigation -->
+                <div class="top_nav">
+
+                    <div class="nav_menu">
+                        <nav class="" role="navigation">
+                            <div class="nav toggle">
+                                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                            </div>
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="">
+                                    <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                        <img src="images/img.jpg" alt="">Usuario
+                                        <span class=" fa fa-angle-down"></span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
+                                        <li><a href="javascript:;">  Perfil</a>
+                                        </li>
+                                        <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Sair</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li role="presentation" class="dropdown">
+                                    <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa fa-envelope-o"></i>
+                                        <span class="badge bg-green">2</span>
+                                    </a>
+                                    <ul id="menu1" class="dropdown-menu list-unstyled msg_list animated fadeInDown" role="menu">
+                                        <li>
+                                            <a>
+                                                <span class="image">
+                                                    <img src="images/img.jpg" alt="Profile Image" />
+                                                </span>
+                                                <span>
+                                                    <span>Usuario</span>
+                                                    <span class="time">3 mins ago</span>
+                                                </span>
+                                                <span class="message">Aberto o pedido #27 do cliente Fulano de Tal</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <span class="image">
+                                                    <img src="images/img.jpg" alt="Profile Image" />
+                                                </span>
+                                                <span>
+                                                    <span>Usuario</span>
+                                                    <span class="time">3 mins ago</span>
+                                                </span>
+                                                <span class="message">Itens do pedido #26 foram entregues sem problemas</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+                <!-- /top navigation -->
+
+                <!-- page content -->
+                <div class="right_col" role="main">
+                    <div class="">
+
+                        <div class="page-title">
+                            <div class="title_left">
+                                <h3>
+                                    Pedidos
+                                    <small>
+                                        Clique para adicionar/editar os pedidos
+                                    </small>
+                                </h3>
+                            </div>
+
+                            <div class="title_right">
+                                <div class="col-md-6 col-sm-5 col-xs-12 form-group pull-right top_search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Procurando por...">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button">Pesquisar</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="x_panel">
+                                    <div class="x_content">
+                                        <div id='calendar'></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- footer content -->
+                    <footer>
+                        <div class="">
+                            <p class="pull-right">Localfest foi desenvolvido por <a>Lipsum</a>. | <span class="lead"> Izzabela Buffet</span>
+                            </p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </footer>
+                    <!-- /footer content -->
+
+                </div>
+
+
+                <!-- Start Calender modal -->
+                <div id="CalenderModalNew" class="modal fade lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myModalLabel">Novo Pedido</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div id="testmodal">
+                                    <form id="antoform" class="form-horizontal calender" role="form">
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Data do Pedido:</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="title" name="title" value="25/09/2015" disabled="disabled">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Data da Devolução:</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="title" name="title" value="26/09/2015" disabled="disabled">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Cliente <span class="required">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="title" name="title">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Forma de Pagamento <span class="required">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control">
+                                                    <option>Dinheiro</option>
+                                                    <option>Cartão de Débito</option>
+                                                    <option>Cartão de Crédito</option>
+                                                    <option>Cheque Pré-datado</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-5 control-label" style="width: 39%;">
+                                                <input type="checkbox" id="delivery_check">
+                                                Frete incluído?
+                                            </label>
+                                        </div>
+                                        <div class="delivery" style="display: none;">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="product">Endereço </label>
+                                                <div class="col-md-9 col-sm-6 col-xs-12">
+                                                    <input type="text" id="product" required="required" class="form-control col-md-7 col-xs-12">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="product">Número </label>
+                                                <div class="col-md-2 col-sm-2 col-xs-2">
+                                                    <input type="text" id="product" required="required" class="form-control col-md-7 col-xs-12">
+                                                </div>
+
+                                                <label class="control-label col-md-1 col-sm-3 col-xs-12" for="product">Bairro </label>
+                                                <div class="col-md-3 col-sm-1 col-xs-12">
+                                                    <input type="text" id="product" required="required" class="form-control col-md-7 col-xs-12">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="product">Cidade </label>
+                                                <div class="col-md-2 col-sm-2 col-xs-2">
+                                                    <input type="text" id="product" required="required" class="form-control col-md-7 col-xs-12">
+                                                </div>
+
+                                                <label class="control-label col-md-1 col-sm-3 col-xs-12" for="product">Estado </label>
+                                                <div class="col-md-3 col-sm-1 col-xs-12">
+                                                    <select class="form-control">
+                                                        <option>Distrito Federal</option>
+                                                        <option>Option one</option>
+                                                        <option>Option two</option>
+                                                        <option>Option three</option>
+                                                        <option>Option four</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-1 control-label">Produto</label>
+                                            <div class="row">
+                                              <div class="col-xs-8">
+                                                <input type="text" class="form-control" placeholder="Descrição do Produto">
+                                              </div>
+                                              <div class="col-xs-2">
+                                                <input type="text" class="form-control" placeholder="Qtde.">
+                                              </div>
+                                              <a class="btn btn-primary" href="#"><i class="fa fa-plus-circle"></i></a>
+                                            </div>
+                                        </div>
+                                        <!-- Produtos inserido no pedido -->
+                                        <div class="col-md-12 col-sm-6 col-xs-12 center">
+                                            <div class="x_panel">
+                                                <div class="x_title">
+                                                    <h2>Produtos do pedido</h2>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="x_content">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>&nbsp;</th>
+                                                                <th>Qtde.</th>
+                                                                <th>Produto</th>
+                                                                <th>Valor do Aluguel</th>
+                                                                <th>Valor da Reposição</th>
+                                                                <th>Total</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>
+                                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                                                                </th>
+                                                                <td>60 unid.</td>
+                                                                <td>Prato provençal branco italiano</td>
+                                                                <td>R$ 0,30</td>
+                                                                <td>R$ 12,00</td>
+                                                                <td><strong>R$ 18,00</strong></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                                                                </th>
+                                                                <td>60 unid.</td>
+                                                                <td>Prato provençal branco italiano</td>
+                                                                <td>R$ 0,30</td>
+                                                                <td>R$ 12,00</td>
+                                                                <td><strong>R$ 18,00</strong></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                                                                </th>
+                                                                <td>60 unid.</td>
+                                                                <td>Prato provençal branco italiano</td>
+                                                                <td>R$ 0,30</td>
+                                                                <td>R$ 12,00</td>
+                                                                <td><strong>R$ 18,00</strong></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-3 col-xs-12 pull-right" style="padding-right: 0; text-align: right;">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading"><strong>Total Geral</strong></div>
+                                            <div class="panel-body">
+                                                <div class="delivery" style="display: none;">
+                                                    <h5>Valor do Frete: <strong>R$ 10,00</strong></h5>
+                                                </div>
+                                                <h5>Valor dos Itens: <strong>R$ 54,00</strong></h5>
+                                                <hr>
+                                                <h4>Total: <strong>R$ 64,00</strong></h4>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger antoclose" data-dismiss="modal">Fechar</button>
+                                <button type="button" class="btn btn-primary antosubmit">Salvar Pedido</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myModalLabel">Editar Pedido #1029</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div id="testmodal">
+                                    <form id="antoform" class="form-horizontal calender" role="form">
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Data do Pedido:</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="title" name="title" value="25/09/2015" disabled="disabled">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Data da Devolução:</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="title" name="title" value="26/09/2015" disabled="disabled">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Cliente <span class="required">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="title" name="title">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="product">Endereço </label>
+                                            <div class="col-md-9 col-sm-6 col-xs-12">
+                                                <input type="text" id="product" required="required" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="product">Número </label>
+                                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                                <input type="text" id="product" required="required" class="form-control col-md-7 col-xs-12">
+                                            </div>
+
+                                            <label class="control-label col-md-1 col-sm-3 col-xs-12" for="product">Bairro </label>
+                                            <div class="col-md-3 col-sm-1 col-xs-12">
+                                                <input type="text" id="product" required="required" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="product">Cidade <span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                                <input type="text" id="product" required="required" class="form-control col-md-7 col-xs-12">
+                                            </div>
+
+                                            <label class="control-label col-md-1 col-sm-3 col-xs-12" for="product">Estado <span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-3 col-sm-1 col-xs-12">
+                                                <select class="form-control">
+                                                    <option>Distrito Federal</option>
+                                                    <option>Option one</option>
+                                                    <option>Option two</option>
+                                                    <option>Option three</option>
+                                                    <option>Option four</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Forma de Pagamento <span class="required">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control">
+                                                    <option>Dinheiro</option>
+                                                    <option>Cartão de Débito</option>
+                                                    <option>Cartão de Crédito</option>
+                                                    <option>Cheque Pré-datado</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <hr>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-1 control-label">Produto</label>
+                                            <div class="row">
+                                              <div class="col-xs-8">
+                                                <input type="text" class="form-control" placeholder="Descrição do Produto">
+                                              </div>
+                                              <div class="col-xs-2">
+                                                <input type="text" class="form-control" placeholder="Qtde.">
+                                              </div>
+                                              <a class="btn btn-primary" href="#"><i class="fa fa-plus-circle"></i></a>
+                                            </div>
+                                        </div>
+                                        <!-- Produtos inserido no pedido -->
+                                        <div class="col-md-12 col-sm-6 col-xs-12 center">
+                                            <div class="x_panel">
+                                                <div class="x_title">
+                                                    <h2>Produtos do pedido</h2>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="x_content">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>&nbsp;</th>
+                                                                <th>Qtde.</th>
+                                                                <th>Produto</th>
+                                                                <th>Valor do Aluguel</th>
+                                                                <th>Valor da Reposição</th>
+                                                                <th>Total</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>
+                                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                                                                </th>
+                                                                <td>60 unid.</td>
+                                                                <td>Prato provençal branco italiano</td>
+                                                                <td>R$ 0,30</td>
+                                                                <td>R$ 12,00</td>
+                                                                <td><strong>R$ 18,00</strong></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                                                                </th>
+                                                                <td>60 unid.</td>
+                                                                <td>Prato provençal branco italiano</td>
+                                                                <td>R$ 0,30</td>
+                                                                <td>R$ 12,00</td>
+                                                                <td><strong>R$ 18,00</strong></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                                                                </th>
+                                                                <td>60 unid.</td>
+                                                                <td>Prato provençal branco italiano</td>
+                                                                <td>R$ 0,30</td>
+                                                                <td>R$ 12,00</td>
+                                                                <td><strong>R$ 18,00</strong></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3 col-xs-12 pull-right" style="padding-right: 0; text-align: right;">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading"><strong>Total Geral</strong></div>
+                                            <div class="panel-body"><h2>R$ 54,00</h2></div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </form>
+                                </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Desfazer Atualização</button>
+                                <button type="button" class="btn btn-danger antoclose" data-dismiss="modal">Cancelar Pedido</button>
+                                <button type="button" class="btn btn-primary antosubmit">Atualizar Pedido</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
+                <div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
+
+                <!-- End Calender modal -->
+                <!-- /page content -->
+            </div>
+
+        </div>
+
+        <div id="custom_notifications" class="custom-notifications dsp_none">
+            <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
+            </ul>
+            <div class="clearfix"></div>
+            <div id="notif-group" class="tabbed_notifications"></div>
+        </div>
+
+        <script src="js/bootstrap.min.js"></script>
+
+        <script src="js/nprogress.js"></script>
+        <!-- chart js -->
+        <script src="js/chartjs/chart.min.js"></script>
+        <!-- bootstrap progress js -->
+        <script src="js/progressbar/bootstrap-progressbar.min.js"></script>
+        <script src="js/nicescroll/jquery.nicescroll.min.js"></script>
+        <!-- icheck -->
+        <script src="js/icheck/icheck.min.js"></script>
+
+        <script src="js/custom.js"></script>
+
+        <script src="js/moment.min.js"></script>
+        <script src="js/calendar/fullcalendar.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/lang/pt-br.js"></script>
+
+        <script>
+            $(window).load(function () {
+
+                var date = new Date();
+                var d = date.getDate();
+                var m = date.getMonth();
+                var y = date.getFullYear();
+                var started;
+                var categoryClass;
+
+                var calendar = $('#calendar').fullCalendar({
+                    lang: 'pt-br',
+                    header: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'month,agendaWeek,agendaDay'
+                    },
+                    selectable: true,
+                    selectHelper: true,
+                    select: function (start, end, allDay) {
+                        $('#fc_create').click();
+
+                        started = start;
+                        ended = end
+
+                        $(".antosubmit").on("click", function () {
+                            var title = $("#title").val();
+                            if (end) {
+                                ended = end
+                            }
+                            categoryClass = $("#event_type").val();
+
+                            if (title) {
+                                calendar.fullCalendar('renderEvent', {
+                                        title: title,
+                                        start: started,
+                                        end: end,
+                                        allDay: allDay
+                                    },
+                                    true // make the event "stick"
+                                );
+                            }
+                            $('#title').val('');
+                            calendar.fullCalendar('unselect');
+
+                            $('.antoclose').click();
+
+                            return false;
+                        });
+                    },
+                    eventClick: function (calEvent, jsEvent, view) {
+                        //alert(calEvent.title, jsEvent, view);
+
+                        $('#fc_edit').click();
+                        $('#title2').val(calEvent.title);
+                        categoryClass = $("#event_type").val();
+
+                        $(".antosubmit2").on("click", function () {
+                            calEvent.title = $("#title2").val();
+
+                            calendar.fullCalendar('updateEvent', calEvent);
+                            $('.antoclose2').click();
+                        });
+                        calendar.fullCalendar('unselect');
+                    },
+                    editable: true,
+                    events: [
+                        {
+                            title: 'All Day Event',
+                            start: new Date(y, m, 1)
+                    },
+                        {
+                            title: 'Long Event',
+                            start: new Date(y, m, d - 5),
+                            end: new Date(y, m, d - 2)
+                    },
+                        {
+                            title: 'Meeting',
+                            start: new Date(y, m, d, 10, 30),
+                            allDay: false
+                    },
+                        {
+                            title: 'Lunch',
+                            start: new Date(y, m, d + 14, 12, 0),
+                            end: new Date(y, m, d, 14, 0),
+                            allDay: false
+                    },
+                        {
+                            title: 'Birthday Party',
+                            start: new Date(y, m, d + 1, 19, 0),
+                            end: new Date(y, m, d + 1, 22, 30),
+                            allDay: false
+                    },
+                        {
+                            title: 'Click for Google',
+                            start: new Date(y, m, 28),
+                            end: new Date(y, m, 29),
+                            url: 'http://google.com/'
+                    }
+                ]
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                $("#delivery_check").on('click', function() {
+                    $(".delivery").toggle();
+                });
+            });
+        </script>
+    </body>
+
+</html>
